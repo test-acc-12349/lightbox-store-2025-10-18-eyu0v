@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lightbox Store - Best Light LED Boxes with portable, USB power, and bright features. Low cost, free shipping, and free returns.">
+    <meta name="keywords" content="LED boxes, light boxes, portable lighting, USB power">
+    <meta name="author" content="Lightbox Store">
+    <title>Lightbox Store - Best Light LED Boxes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+        
+        .feature-card {
+            transition: all 300ms ease-in-out;
+        }
+        
+        .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefit-card {
+            transition: all 300ms ease-in-out;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            transition: all 300ms ease-in-out;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button {
+            transition: all 300ms ease-in-out;
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .accordion-button {
+            transition: all 300ms ease-in-out;
+        }
+        
+        .accordion-button:hover {
+            background-color: #f3f4f6;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 300ms ease-in-out;
+        }
+        
+        .accordion-content.active {
+            max-height: 500px;
+        }
+        
+        .mobile-menu {
+            transition: all 300ms ease-in-out;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .nav-link {
+            transition: color 300ms ease-in-out;
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #1f2937;
+            transition: width 300ms ease-in-out;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .announcement-bar {
+            background: linear-gradient(90deg, #1f2937 0%, #374151 100%);
+            animation: slideDown 500ms ease-out;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .star-rating {
+            color: #fbbf24;
+        }
+        
+        .header-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Announcement Bar -->
+    <div class="announcement-bar text-white text-center py-2 px-4 text-sm md:text-base">
+        <i class="fas fa-truck mr-2"></i> Fast Worldwide Shipping - 5 Days Delivery | 100% Satisfaction Guarantee
+    </div>
+
+    <!-- Header -->
+    <header class="header-sticky">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2 cursor-pointer">
+                <i class="fas fa-lightbulb text-2xl text-gray-900"></i>
+                <span class="text-2xl font-bold text-gray-900">Lightbox</span>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link text-gray-700 font-medium hover:text-gray-900">Home</a>
+                <a href="#features" class="nav-link text-gray-700 font-medium hover:text-gray-900">Features</a>
+                <a href="#benefits" class="nav-link text-gray-700 font-medium hover:text-gray-900">Benefits</a>
+                <a href="#about" class="nav-link text-gray-700 font-medium hover:text-gray-900">About</a>
+                <a href="#testimonials" class="nav-link text-gray-700 font-medium hover:text-gray-900">Testimonials</a>
+                <a href="#faq" class="nav-link text-gray-700 font-medium hover:text-gray-900">FAQ</a>
+                <a href="#contact" class="nav-link text-gray-700 font-medium hover:text-gray-900">Contact</a>
+            </div>
+
+            <!-- Right Section -->
+            <div class="flex items-center space-x-4">
+                <div class="hidden sm:flex items-center bg-gray-100 rounded-lg px-3 py-2">
+                    <input type="text" placeholder="Search..." class="bg-transparent outline-none text-sm w-32" />
+                    <i class="fas fa-search text-gray-500 ml-2"></i>
+                </div>
+                <a href="https://lru.com" class="hidden sm:inline-block cta-button text-white font-semibold px-6 py-2 rounded-lg">
+                    Buy Now
+                </a>
+                <button class="mobile-menu-button md:hidden text-gray-900 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col space-y-4">
+                <a href="#home" class="text-gray-700 font-medium hover:text-gray-900 block py-2">Home</a>
+                <a href="#features" class="text-gray-700 font-medium hover:text-gray-900 block py-2">Features</a>
+                <a href="#benefits" class="text-gray-700 font-medium hover:text-gray-900 block py-2">Benefits</a>
+                <a href="#about" class="text-gray-700 font-medium hover:text-gray-900 block py-2">About</a>
+                <a href="#testimonials" class="text-gray-700 font-medium hover:text-gray-900 block py-2">Testimonials</a>
+                <a href="#faq" class="text-gray-700 font-medium hover:text-gray-900 block py-2">FAQ</a>
+                <a href="#contact" class="text-gray-700 font-medium hover:text-gray-900 block py-2">Contact</a>
+                <a href="https://lru.com" class="cta-button text-white font-semibold px-6 py-2 rounded-lg inline-block w-full text-center">
+                    Buy Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen md:h-96 bg-cover bg-center flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1504093376055-b3094b674dcb?w=1600&h=900&fit=crop&q=80');">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight leading-tight">
+                Lightbox Store
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-100 mb-8 font-light leading-relaxed">
+                Best Light LED Boxes
+            </p>
+            <a href="https://lru.com" class="cta-button text-white font-semibold px-8 py-4 rounded-lg inline-block text-lg hover:shadow-2xl">
+                Shop Now <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                    Premium Features
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    Discover what makes our LED light boxes the industry standard for professionals and enthusiasts alike.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Portable Feature -->
+                <div class="feature-card bg-white border border-gray-200 rounded-xl p-8 hover:border-gray-300">
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-briefcase text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Portable</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Lightweight and compact design makes it easy to carry anywhere. Perfect for on-the-go professionals who need reliable lighting solutions.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><i class="fas fa-check text-green-600 mr-2"></i> Weighs less than 2 lbs</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i> Fits in any bag or case</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i> Durable carrying handle</li>
+                    </ul>
+                </div>
+
+                <!-- USB Power Feature -->
+                <div class="feature-card bg-white border border-gray-200 rounded-xl p-8 hover:border-gray-300">
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-plug text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">USB Power</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Universal USB charging compatibility works with any standard USB power adapter or power bank for ultimate convenience.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><i class="fas fa-check text-green-600 mr-2"></i> USB-C and Micro USB</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i> Power bank compatible</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i> Fast charging support</li>
+                    </ul>
+                </div>
+
+                <!-- Bright Feature -->
+                <div class="feature-card bg-white border border-gray-200 rounded-xl p-8 hover:border-gray-300">
+                    <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-sun text-2xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Bright</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Advanced LED technology delivers exceptional brightness and color accuracy for professional-grade photography and videography.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><i class="fas fa-check text-green-600 mr-2"></i> 5000K color temperature</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i> 95+ CRI rating</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i> Adjustable intensity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                    Why Choose Us
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    We're committed to providing exceptional value and service to every customer.
+                </p>
+            </div>
+
+            <!-- Benefit 1: Low Cost -->
+            <div class="benefit-card mb-16 bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                    <div class="p-8 md:p-12 flex flex-col justify-center order-2 md:order-1">
+                        <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                            Unbeatable Pricing
+                        </h3>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-4">
+                            We believe premium quality shouldn't come with a premium price tag. Our LED light boxes are engineered to deliver professional-grade performance at prices that won't break the bank. We work directly with manufacturers to eliminate middlemen and pass the savings directly to you.
+                        </p>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            With competitive pricing and frequent promotions, you'll find the best value for your investment. Compare our prices with other brands and see the difference.
+                        </p>
+                        <a href="https://lru.com" class="cta-button text-white font-semibold px-6 py-3 rounded-lg inline-block w-fit hover:shadow-lg">
+                            View Pricing <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    <div class="order-1 md:order-2 h-96 md:h-auto overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=600&fit=crop&q=80" alt="Low Cost LED Boxes" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 2: Free Shipping -->
+            <div class="benefit-card mb-16 bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                    <div class="h-96 md:h-auto overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" alt="Free Shipping Worldwide" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <div class="p-8 md:p-12 flex flex-col justify-center">
+                        <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                            Free Worldwide Shipping
+                        </h3>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-4">
+                            We offer completely free shipping to anywhere in the world. No hidden fees, no minimum order requirements. Your order will be carefully packaged and delivered within 5 business days to most locations.
+                        </p>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            Our reliable shipping partners ensure your LED light box arrives safely and on time. Track your order every step of the way with our advanced tracking system.
+                        </p>
+                        <a href="https://lru.com" class="cta-button text-white font-semibold px-6 py-3 rounded-lg inline-block w-fit hover:shadow-lg">
+                            Shop Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 3: Free Returns -->
+            <div class="benefit-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                    <div class="p-8 md:p-12 flex flex-col justify-center order-2 md:order-1">
+                        <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                            Hassle-Free Returns
+                        </h3>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-4">
+                            We stand behind our products 100%. If you're not completely satisfied with your LED light box for any reason, we offer a full refund within 60 days of purchase. No questions asked, no restocking fees.
+                        </p>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            Your satisfaction is our top priority. We even provide free return shipping labels to make the process as easy as possible. Shop with confidence knowing you're fully protected.
+                        </p>
+                        <a href="https://lru.com" class="cta-button text-white font-semibold px-6 py-3 rounded-lg inline-block w-fit hover:shadow-lg">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    <div class="order-1 md:order-2 h-96 md:h-auto overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800&h=600&fit=crop&q=80" alt="Free Returns Guarantee" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                    About Lightbox Store
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Discover our story and commitment to excellence
+                </p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 space-y-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Story</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Founded in 2015, Lightbox Store was born from a simple observation: professional photographers and content creators were struggling to find affordable, high-quality lighting solutions that didn't compromise on performance. Our founder, a professional photographer himself, recognized the gap in the market and set out to revolutionize the industry. Starting from a small workshop with just three employees, we've grown into a trusted brand serving thousands of customers across the globe. Our journey has been fueled by a passion for innovation, quality craftsmanship, and an unwavering commitment to customer satisfaction. Today, we're proud to be recognized as one of the leading providers of premium LED lighting solutions.
+                    </p>
+                </div>
+
+                <div class="border-t border-gray-200 pt-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission & Values</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Our mission is to empower creators worldwide by providing access to professional-grade lighting equipment at accessible prices. We believe that exceptional lighting should be available to everyone, regardless of budget. We're committed to sustainability, ethical manufacturing, and continuous innovation. Our core values—integrity, excellence, and customer-centricity—guide every decision we make. We invest heavily in research and development to stay ahead of industry trends, and we partner with the finest manufacturers to ensure every product meets our rigorous quality standards. With every purchase, you're not just buying a product; you're joining a community of creators dedicated to pushing the boundaries of what's possible.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                    Loved by Creators
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    See what our customers have to say about their experience with Lightbox Store
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white border border-gray-200 rounded-xl p-8 hover:border-gray-300">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star star-rating"></i>
+                            <i class="fas fa-star star-rating"></i>
+                            <i class="fas fa-star star-rating"></i>
+                            <i class="fas fa-star star-rating"></i>
+                            <i class="fas fa-star star-rating"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        "The Lightbox LED boxes have completely transformed my photography business. The brightness and color accuracy are exceptional, and the portable design means I can shoot anywhere. I've already recommended these to all my photographer friends, and they're equally impressed. Best investment I've made in my equipment!"
+                    </p>
+                    <div class="border-t border-gray-200 pt-4">
+                        <p class="font-semibold text-gray-900">Sarah Mitchell</p>
+                        <p class="text-gray-600 text-sm">Professional Photographer, Creative Studios</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white border border-gray-200 rounded-xl p-8 hover:border-gray-300">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star star-rating"></i>
+                            <i class="fas fa-star star-rating"></i>
+                            <i class="fas fa-star star-rating"></i>
+                            <i class="fas fa-star star-rating"></i>
+                            <i class="fas fa-star star-rating"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        "I was skeptical about the price point initially, but the quality exceeded my expectations. The USB power feature is incredibly convenient for my studio setup. Customer service was responsive and helpful when I had questions. These are definitely worth every penny!"
+                    </p>
+                    <div class="border-t border-gray-200 pt-4">
+                        <p class="font-semibold text-gray-900">James Chen</p>
+                        <p class="text-gray-600 text-sm">Video Producer, Digital Media Agency</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white border border-gray-200 rounded-xl p-8 hover:border-gray-300">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star star-rating"></i>
+                            <i class="fas fa-star star-rating"></i>
+                            <i class="fas fa-star star-rating"></i>
+                            <i class="fas fa-star star-rating"></i>
+                            <i class="fas fa-star star-rating"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        "As a content creator on a budget, finding affordable professional lighting was crucial. These LED boxes deliver studio-quality results without the studio price tag. The free shipping and returns policy gave me peace of mind. I've used them for over a year now with zero issues!"
+                    </p>
+                    <div class="border-t border-gray-200 pt-4">
+                        <p class="font-semibold text-gray-900">Emma Rodriguez</p>
+                        <p class="text-gray-600 text-sm">Content Creator & Influencer</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card bg-white border border-gray-200 rounded-xl p-8 hover:border-gray-300">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star star-rating"></i>
+                            <i class="fas fa-star star-rating"></i>
+                            <i class="fas fa-star star-rating"></i>
+                            <i class="fas fa-star star-rating"></i>
+                            <i class="fas fa-star star-rating"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        "I purchased three units for my production company, and they've become indispensable to our workflow. The consistency across units is impressive, and the durability has proven excellent through daily use. The ROI has been significant with the quality of content we can now produce."
+                    </p>
+                    <div class="border-t border-gray-200 pt-4">
+                        <p class="font-semibold text-gray-900">Michael Torres</p>
+                        <p class="text-gray-600 text-sm">Production Manager, Media Solutions Inc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Find answers to common questions about our LED light boxes
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="accordion-button w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors duration-300 focus:outline-none" onclick="toggleAccordion(this)">
+                        <span class="text-lg font-semibold text-gray-900 text-left">
+                            What is the warranty coverage for Lightbox LED products?
+                        </span>
+                        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-8 py-6 border-t border-gray-200 bg-gray-50">
+                            <p class="text-gray-600 leading-relaxed">
+                                All Lightbox Store LED light boxes come with a comprehensive 2-year manufacturer's warranty covering defects in materials and workmanship. This includes coverage for LED failures, power issues, and structural defects. We also offer optional extended warranty plans for up to 5 years. Additionally, we provide a 60-day money-back guarantee, so you can purchase with complete confidence. If you experience any issues within the warranty period, simply contact our customer service team and we'll arrange a replacement or repair at no cost to you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="accordion-button w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors duration-300 focus:outline-none" onclick="toggleAccordion(this)">
+                        <span class="text-lg font-semibold text-gray-900 text-left">
+                            Can I use the LED boxes for professional video production?
+                        </span>
+                        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-8 py-6 border-t border-gray-200 bg-gray-50">
+                            <p class="text-gray-600 leading-relaxed">
+                                Absolutely! Our LED light boxes are specifically designed for professional video production. They feature a 95+ CRI (Color Rendering Index) rating, which ensures accurate color reproduction essential for broadcast and streaming applications. The 5000K color temperature provides daylight-balanced lighting perfect for most video work. The adjustable intensity allows you to fine-tune the lighting to your specific needs, and the flicker-free operation ensures smooth video capture at any frame rate. Many professional production companies and video creators rely on our boxes for their daily work. Whether you're shooting interviews, product videos, or live streaming, these boxes deliver professional-grade results.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="accordion-button w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors duration-300 focus:outline-none" onclick="toggleAccordion(this)">
+                        <span class="text-lg font-semibold text-gray-900 text-left">
+                            How long do the LED bulbs last, and are they replaceable?
+                        </span>
+                        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-8 py-6 border-t border-gray-200 bg-gray-50">
+                            <p class="text-gray-600 leading-relaxed">
+                                Our premium LED technology is engineered for exceptional longevity. The LED panels are rated for approximately 50,000 hours of continuous use, which translates to over 5 years of daily 8-hour operation. This means most users will never need to replace the LEDs during the product's lifetime. However, if LED replacement is ever needed, we offer replacement panels at competitive prices. The modular design makes replacement straightforward and can be done in minutes without special tools. We also provide detailed replacement guides and video tutorials on our website. Our customer support team is always available to assist you with any LED-related questions or concerns.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="accordion-button w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors duration-300 focus:outline-none" onclick="toggleAccordion(this)">
+                        <span class="text-lg font-semibold text-gray-900 text-left">
+                            What power options are available, and can I use it with a power bank?
+                        </span>
+                        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-8 py-6 border-t border-gray-200 bg-gray-50">
+                            <p class="text-gray-600 leading-relaxed">
+                                Our LED light boxes feature universal USB power compatibility with support for both USB-C and Micro USB connections. This versatility means you can power your box using virtually any modern USB power adapter, making it incredibly convenient for both studio and on-location work. Yes, you can absolutely use a power bank! Most modern power banks with 10,000mAh capacity or higher will provide sufficient power for extended use. For maximum runtime, we recommend using a power bank with at least 20,000mAh capacity. The boxes are also compatible with standard wall adapters, car chargers, and solar power banks for truly portable operation. We include a USB cable with every purchase, and you can purchase additional cables or adapters from our store for added convenience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1504093376055-b3094b674dcb?w=1600&h=900&fit=crop&q=80');"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+                Ready to Elevate Your Lighting Game?
+            </h2>
+            <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Join thousands of satisfied customers who have transformed their creative work with Lightbox Store LED solutions.
+            </p>
+            <a href="https://lru.com" class="cta-button text-white font-semibold px-8 py-4 rounded-lg inline-block text-lg hover:shadow-2xl">
+                Shop Our Collection Now <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                    Get In Touch
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Have questions? We'd love to hear from you. Contact us anytime.
+                </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl shadow-lg p-8 md:p-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-gradient-to-br from-blue-50 to-blue-100 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-envelope text-blue-600 text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Email</h3>
+                            <a href="mailto:admin@lru.com" class="text-blue-600 hover:text-blue-700 transition-colors duration-300">
+                                admin@lru.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-gradient-to-br from-green-50 to-green-100 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-globe text-green-600 text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Website</h3>
+                            <a href="https://lru.com" class="text-green-600 hover:text-green-700 transition-colors duration-300">
+                                https://lru.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-200 pt-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Send us a Message</h3>
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors duration-300" required>
+                            <input type="email" placeholder="Your Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors duration-300" required>
+                        </div>
+                        <input type="text" placeholder="Subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors duration-300" required>
+                        <textarea placeholder="Your Message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors duration-300" required></textarea>
+                        <button type="submit" class="cta-button text-white font-semibold px-8 py-3 rounded-lg hover:shadow-lg w-full md:w-auto">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Policies Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-gradient-to-br from-blue-50 to-blue-100 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-shipping-fast text-blue-600 text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Fast Worldwide Shipping</h3>
+                            <p class="text-gray-600">
+                                We deliver to anywhere in the world with free shipping. Your order arrives within 5 business days to most locations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-gradient-to-br from-green-50 to-green-100 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-undo text-green-600 text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">100% Satisfaction Guarantee</h3>
+                            <p class="text-gray-600">
+                                Full refund upon return within 60 days. No questions asked. We stand behind our products completely.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Footer Content -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-lightbulb text-2xl text-yellow-400"></i>
+                        <span class="text-2xl font-bold text-white">Lightbox</span>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-4">
+                        Premium LED light boxes for photographers, videographers, and content creators worldwide.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-youtube text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#home" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a>
+                        </li>
+                        <li>
+                            <a href="#features" class="text-gray-400 hover:text-white transition-colors duration-300">Features</a>
+                        </li>
+                        <li>
+                            <a href="#benefits" class="text-gray-400 hover:text-white transition-colors duration-300">Benefits</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#testimonials" class="text-gray-400 hover:text-white transition-colors duration-300">Testimonials</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Support</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#faq" class="text-gray-400 hover:text-white transition-colors duration-300">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="privacy.html" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="terms.html" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a>
+                        </li>
+                        <li>
+                            <a href="blog.html" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Contact</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-envelope text-yellow-400 mt-1 flex-shrink-0"></i>
+                            <a href="mailto:admin@lru.com" class="text-gray-400 hover:text-white transition-colors duration-300">admin@lru.com</a>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-globe text-yellow-400 mt-1 flex-shrink-0"></i>
+                            <a href="https://lru.com" class="text-gray-400 hover:text-white transition-colors duration-300 break-all">https://lru.com</a>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-yellow-400 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-400">Worldwide Shipping Available</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <p class="text-gray-400 text-sm text-center md:text-left mb-4 md:mb-0">
+                        &copy; <span id="year">2024</span> Lightbox Store. All rights reserved.
+                    </p>
+                    <div class="flex items-center space-x-6">
+                        <a href="privacy.html" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Privacy Policy</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Terms of Service</a>
+                        <a href="blog.html" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.mobile-menu').classList.remove('active');
+            });
+        });
+
+        // Accordion functionality
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            // Close other accordions
+            document.querySelectorAll('.accordion-content.active').forEach(item => {
+                if (item !== content) {
+                    item.classList.remove('active');
+                    item.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Toggle current accordion
+            content.classList.toggle('active');
+            
+            // Rotate icon
+            if (content.classList.contains('active')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
