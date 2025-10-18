@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Master professional lighting techniques with LED light boxes. Learn tips, tricks, and best practices for photography and videography.">
+    <meta name="keywords" content="LED lighting, professional photography, lighting techniques, video production, light boxes">
+    <meta name="author" content="Lightbox Store">
+    <title>Complete Guide to Professional LED Lighting for Photography and Video</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+        
+        .feature-card {
+            transition: all 300ms ease-in-out;
+        }
+        
+        .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefit-card {
+            transition: all 300ms ease-in-out;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            transition: all 300ms ease-in-out;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button {
+            transition: all 300ms ease-in-out;
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .accordion-button {
+            transition: all 300ms ease-in-out;
+        }
+        
+        .accordion-button:hover {
+            background-color: #f3f4f6;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 300ms ease-in-out;
+        }
+        
+        .accordion-content.active {
+            max-height: 500px;
+        }
+        
+        .mobile-menu {
+            transition: all 300ms ease-in-out;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .nav-link {
+            transition: color 300ms ease-in-out;
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #1f2937;
+            transition: width 300ms ease-in-out;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .announcement-bar {
+            background: linear-gradient(90deg, #1f2937 0%, #374151 100%);
+            animation: slideDown 500ms ease-out;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .star-rating {
+            color: #fbbf24;
+        }
+        
+        .header-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-content {
+            line-height: 1.8;
+            color: #374151;
+        }
+
+        .blog-content h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-content p {
+            margin-bottom: 1.25rem;
+        }
+
+        .blog-content ul, .blog-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .blog-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-content strong {
+            color: #1f2937;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Announcement Bar -->
+    <div class="announcement-bar text-white text-center py-2 px-4 text-sm md:text-base">
+        <i class="fas fa-truck mr-2"></i> Fast Worldwide Shipping - 5 Days Delivery | 100% Satisfaction Guarantee
+    </div>
+
+    <!-- Header -->
+    <header class="header-sticky">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <a href="https://test-acc-12349.github.io/lightbox-store-2025-10-18-eyu0v" class="flex items-center space-x-2 cursor-pointer">
+                    <i class="fas fa-lightbulb text-2xl text-gray-900"></i>
+                    <span class="text-2xl font-bold text-gray-900">Lightbox</span>
+                </a>
+                <a href="https://test-acc-12349.github.io/lightbox-store-2025-10-18-eyu0v" class="nav-link text-gray-700 font-medium hover:text-gray-900">
+                    ← Back
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Content -->
+    <article class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <!-- Blog Header -->
+            <div class="mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight leading-tight">
+                    Complete Guide to Professional LED Lighting for Photography and Video
+                </h1>
+                <div class="flex items-center space-x-4 text-gray-600 mb-8">
+                    <span class="flex items-center"><i class="fas fa-calendar mr-2"></i> January 15, 2024</span>
+                    <span class="flex items-center"><i class="fas fa-user mr-2"></i> Lightbox Store</span>
+                    <span class="flex items-center"><i class="fas fa-clock mr-2"></i> 8 min read</span>
+                </div>
+            </div>
+
+            <!-- Featured Image -->
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f70504504?w=1200&h=675&fit=crop&q=80" alt="Professional LED lighting setup for photography and videography studio" class="w-full rounded-lg shadow-lg mb-12">
+
+            <!-- Blog Content -->
+            <div class="blog-content">
+                <p>
+                    Professional lighting is the cornerstone of exceptional photography and videography. Whether you're a seasoned professional or just starting your creative journey, understanding how to properly use LED light boxes can dramatically transform the quality of your work. In this comprehensive guide, we'll explore everything you need to know about professional LED lighting, from fundamental principles to advanced techniques that will take your content creation to the next level.
+                </p>
+
+                <h2>Understanding the Fundamentals of LED Lighting</h2>
+                <p>
+                    LED (Light Emitting Diode) technology has revolutionized the way professionals approach lighting. Unlike traditional incandescent or fluorescent lights, LEDs offer superior efficiency, cooler operation, and exceptional color accuracy. When choosing a professional LED light box, it's essential to understand key specifications that determine its performance.
+                </p>
+                <p>
+                    <strong>Color Temperature</strong> is measured in Kelvin (K) and represents the warmth or coolness of light. Most professional LED light boxes operate at 5000K, which mimics daylight and provides neutral, balanced illumination perfect for most photography and video work. This standard color temperature ensures your content looks natural and professional across all viewing platforms.
+                </p>
+                <p>
+                    <strong>Color Rendering Index (CRI)</strong> measures how accurately light reproduces colors compared to natural sunlight. A CRI of 95 or higher is considered professional-grade and ensures that skin tones appear natural, product colors are accurately represented, and overall image quality remains consistent. Premium LED light boxes like those from Lightbox Store feature 95+ CRI ratings, making them ideal for professional applications.
+                </p>
+
+                <h2>Setting Up Your Professional Lighting System</h2>
+                <p>
+                    Proper lighting setup is crucial for achieving professional results. The key to effective lighting is understanding the relationship between your main light, fill light, and background light. This three-point lighting technique has been the industry standard for decades and continues to deliver exceptional results.
+                </p>
+                <p>
+                    <strong>Main Light (Key Light):</strong> This is your primary light source and should be positioned at a 45-degree angle to your subject. The main light creates the primary illumination and establishes the overall mood of your shot. For portrait photography, position it higher than eye level to create flattering shadows. For product photography, adjust the angle based on the product's shape and texture to highlight its best features.
+                </p>
+                <p>
+                    <strong>Fill Light:</strong> The fill light softens harsh shadows created by the main light. Position it on the opposite side of the main light at a lower intensity. A good rule of thumb is to set fill light at about half the intensity of your main light. This creates dimension while maintaining natural-looking shadows that add depth to your images.
+                </p>
+                <p>
+                    <strong>Background Light:</strong> This light separates your subject from the background, creating visual depth and professional separation. Position it behind your subject, pointing toward the background. This technique is particularly effective for portrait photography and product shots, helping your subject stand out dramatically.
+                </p>
+
+                <h2>Mastering Lighting Techniques for Photography</h2>
+                <p>
+                    Different photography genres require specific lighting approaches. Understanding these techniques will help you adapt your LED light boxes to various creative scenarios.
+                </p>
+                <p>
+                    <strong>Portrait Photography:</strong> For flattering portrait lighting, use a large LED light box as your main light to create soft, diffused illumination that minimizes unflattering shadows. The adjustable intensity feature of modern LED boxes is invaluable here—you can fine-tune the brightness to match your subject's skin tone and the ambient lighting conditions. Position the light slightly above eye level and angle it toward your subject. Use a secondary LED box as fill light to control shadow depth, creating a professional look that's flattering and magazine-worthy.
+                </p>
+                <p>
+                    <strong>Product Photography:</strong> Product lighting requires precision and attention to detail. LED light boxes excel in this application due to their consistent color temperature and adjustable intensity. For reflective products, use diffusion to soften the light and minimize harsh reflections. For matte products, you can use more direct lighting to emphasize texture and detail. The portable nature of LED boxes means you can easily adjust lighting angles and distances to highlight your product's best features.
+                </p>
+                <p>
+                    <strong>Food Photography:</strong> Food photography demands warm, appetizing lighting. While 5000K LED boxes provide neutral daylight, you can add subtle warm gels or use lower intensity settings to create a more inviting atmosphere. Position your main light at a 45-degree angle to emphasize texture and detail in food. Use reflectors or fill lights strategically to control shadows and ensure all elements of your composition are properly illuminated.
+                </p>
+
+                <h2>Professional Video Production Lighting</h2>
+                <p>
+                    Video production has unique lighting requirements compared to still photography. Consistent, flicker-free illumination is absolutely essential for professional video work. Premium LED light boxes are specifically engineered to eliminate flicker at any frame rate, making them perfect for both traditional video production and live streaming applications.
+                </p>
+                <p>
+                    <strong>Interview and Talking Head Lighting:</strong> For interviews and talking head videos, use the three-point lighting technique with careful attention to skin tones and facial structure. Position your main light at a 45-degree angle to create dimension while remaining flattering. Use fill light to control shadow depth, and add a subtle background light to separate your subject from the background. LED boxes' adjustable intensity allows you to fine-tune the lighting to match your subject's appearance and the overall aesthetic you're creating.
+                </p>
+                <p>
+                    <strong>Live Streaming Setup:</strong> Live streaming presents unique challenges because you cannot correct lighting in post-production. LED light boxes are ideal for streaming because of their consistency and reliability. Position your main light directly in front of you at eye level to minimize unflattering shadows. Add a subtle fill light to control shadow depth. The USB power compatibility of modern LED boxes means you can power multiple units from power banks or standard adapters, making your streaming setup incredibly flexible and portable.
+                </p>
+                <p>
+                    <strong>Multi-Camera Production:</strong> When using multiple cameras, consistent lighting is critical. LED light boxes maintain uniform color temperature and intensity across multiple units, ensuring that all cameras capture consistent color and exposure. This is particularly important when editing footage from multiple camera angles—consistent lighting means easier color correction and more professional final results.
+                </p>
+
+                <h2>Advanced Techniques for Professional Results</h2>
+                <p>
+                    Once you've mastered the fundamentals, these advanced techniques will help you create truly exceptional content that stands out from the competition.
+                </p>
+                <p>
+                    <strong>Backlighting and Rim Lighting:</strong> Backlighting creates a glowing outline around your subject, adding dimension and separating them from the background. Position an LED light box behind your subject, pointing toward the camera. Adjust the intensity carefully to create a subtle glow without overexposing your image. This technique is particularly effective for portraits and product photography, creating a professional, high-end look.
+                </p>
+                <p>
+                    <strong>Color Gels and Creative Lighting:</strong> While professional LED boxes operate at neutral 5000K, you can add color gels to create mood and atmosphere. Warm gels create intimate, cozy feelings, while cool gels create modern, energetic vibes. Experiment with subtle color shifts to enhance the emotional impact of your work. Many professional photographers use colored gels strategically to create unique, recognizable styles that set their work apart.
+                </p>
+                <p>
+                    <strong>Diffusion and Light Shaping:</strong> The size and quality of your light source dramatically affects shadow quality. Larger light sources create softer, more flattering shadows. Use diffusion panels in front of your LED boxes to increase the apparent light source size, creating softer shadows and more professional results. Reflectors, flags, and other light shaping tools allow you to precisely control how light falls on your subject.
+                </p>
+
+                <h2>Optimizing Your LED Light Box Setup</h2>
+                <p>
+                    To maximize the performance of your LED light boxes, consider these optimization strategies. First, invest in quality light stands and mounting hardware that allow precise positioning and adjustment. Second, use the adjustable intensity feature strategically—dimmer light often looks more natural than maximum brightness. Third, maintain consistency by documenting your lighting setup for different scenarios, making it easy to replicate successful configurations.
+                </p>
+                <p>
+                    The portability of modern LED light boxes means you can create professional lighting setups anywhere. Whether you're shooting in a studio, on location, or outdoors, LED boxes provide consistent, reliable illumination. The USB power compatibility means you can power your setup with standard adapters, power banks, or even solar chargers for ultimate flexibility.
+                </p>
+
+                <h2>Common Lighting Mistakes to Avoid</h2>
+                <p>
+                    Understanding common mistakes helps you avoid them and accelerate your professional development. Many beginners position their main light too low, creating unflattering shadows under the eyes and nose. Always position your main light above eye level for flattering results. Another common mistake is using maximum intensity when lower, more subtle lighting often looks more professional. Experiment with intensity levels to find the sweet spot for your specific application.
+                </p>
+                <p>
+                    Avoid harsh, uncontrolled shadows by using fill light effectively. Shadows add dimension, but excessive shadow depth can make images look amateurish. Use fill light to maintain detail in shadow areas while preserving the three-dimensional quality of your lighting. Finally, don't neglect background lighting—proper background illumination completes your professional look and separates your subject from the background.
+                </p>
+
+                <h2>Investing in Your Lighting Future</h2>
+                <p>
+                    Professional LED light boxes represent an investment in your creative future. Unlike traditional lighting solutions, LED technology offers superior efficiency, consistency, and versatility. Whether you're a professional photographer, videographer, content creator, or enthusiast, quality LED lighting dramatically improves your work quality and creative possibilities.
+                </p>
+                <p>
+                    The combination of professional-grade performance, affordable pricing, and user-friendly design makes LED light boxes the ideal choice for modern creators. By mastering the techniques outlined in this guide and investing in quality equipment, you'll create content that stands out, impresses clients, and builds your reputation as a serious professional.
+                </p>
+
+                <div class="mt-12 p-8 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border border-blue-200">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Ready to Transform Your Lighting Setup?</h3>
+                    <p class="text-gray-700 mb-6">
+                        Discover how professional LED light boxes from Lightbox Store can elevate your photography and videography work. With premium 95+ CRI ratings, adjustable intensity, USB power compatibility, and portable design, our LED boxes are trusted by professionals worldwide.
+                    </p>
+                    <a href="https://lru.com" class="cta-button text-white font-semibold px-6 py-3 rounded-lg inline-block hover:shadow-lg">
+                        Explore Our LED Light Boxes <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Related Articles Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Related Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <i class="fas fa-camera text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Essential Photography Lighting Tips</h3>
+                        <p class="text-gray-600 mb-4">Master the basics of photography lighting with our comprehensive guide to creating stunning images.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-medium flex items-center">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                        <i class="fas fa-video text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Video Production Lighting Setup</h3>
+                        <p class="text-gray-600 mb-4">Learn professional video lighting techniques that will enhance your production quality immediately.</p>
+                        <a href="#" class="text-green-600 hover:text-green-700 font-medium flex items-center">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-lightbulb text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">LED Technology Explained</h3>
+                        <p class="text-gray-600 mb-4">Understand the science behind LED lighting and why it's the professional choice for modern creators.</p>
+                        <a href="#" class="text-purple-600 hover:text-purple-700 font-medium flex items-center">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Footer Content -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-lightbulb text-2xl text-yellow-400"></i>
+                        <span class="text-2xl font-bold text-white">Lightbox</span>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-4">
+                        Premium LED light boxes for photographers, videographers, and content creators worldwide.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-youtube text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="https://test-acc-12349.github.io/lightbox-store-2025-10-18-eyu0v#home" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a>
+                        </li>
+                        <li>
+                            <a href="https://test-acc-12349.github.io/lightbox-store-2025-10-18-eyu0v#features" class="text-gray-400 hover:text-white transition-colors duration-300">Features</a>
+                        </li>
+                        <li>
+                            <a href="https://test-acc-12349.github.io/lightbox-store-2025-10-18-eyu0v#benefits" class="text-gray-400 hover:text-white transition-colors duration-300">Benefits</a>
+                        </li>
+                        <li>
+                            <a href="https://test-acc-12349.github.io/lightbox-store-2025-10-18-eyu0v#about" class="text-gray-400 hover:text-white transition-colors duration-300">About Us</a>
+                        </li>
+                        <li>
+                            <a href="https://test-acc-12349.github.io/lightbox-store-2025-10-18-eyu0v#testimonials" class="text-gray-400 hover:text-white transition-colors duration-300">Testimonials</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Support</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="https://test-acc-12349.github.io/lightbox-store-2025-10-18-eyu0v#faq" class="text-gray-400 hover:text-white transition-colors duration-300">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="https://test-acc-12349.github.io/lightbox-store-2025-10-18-eyu0v#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Contact</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-envelope text-yellow-400 mt-1 flex-shrink-0"></i>
+                            <a href="mailto:admin@lru.com" class="text-gray-400 hover:text-white transition-colors duration-300">admin@lru.com</a>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-globe text-yellow-400 mt-1 flex-shrink-0"></i>
+                            <a href="https://lru.com" class="text-gray-400 hover:text-white transition-colors duration-300 break-all">https://lru.com</a>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-yellow-400 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-400">Worldwide Shipping Available</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <p class="text-gray-400 text-sm text-center md:text-left mb-4 md:mb-0">
+                        &copy; <span id="year">2024</span> Lightbox Store. All rights reserved.
+                    </p>
+                    <div class="flex items-center space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
