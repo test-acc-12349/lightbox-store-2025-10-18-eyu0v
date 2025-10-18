@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lightbox Store - Best Light LED Boxes with portable, USB power, and bright features. Low cost, free shipping, and free returns.">
+    <meta name="keywords" content="LED boxes, light boxes, portable lighting, USB power">
+    <meta name="author" content="Lightbox Store">
+    <title>Terms of Service - Lightbox Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+        
+        .feature-card {
+            transition: all 300ms ease-in-out;
+        }
+        
+        .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefit-card {
+            transition: all 300ms ease-in-out;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            transition: all 300ms ease-in-out;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button {
+            transition: all 300ms ease-in-out;
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .accordion-button {
+            transition: all 300ms ease-in-out;
+        }
+        
+        .accordion-button:hover {
+            background-color: #f3f4f6;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 300ms ease-in-out;
+        }
+        
+        .accordion-content.active {
+            max-height: 500px;
+        }
+        
+        .mobile-menu {
+            transition: all 300ms ease-in-out;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .nav-link {
+            transition: color 300ms ease-in-out;
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #1f2937;
+            transition: width 300ms ease-in-out;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .announcement-bar {
+            background: linear-gradient(90deg, #1f2937 0%, #374151 100%);
+            animation: slideDown 500ms ease-out;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .star-rating {
+            color: #fbbf24;
+        }
+        
+        .header-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Announcement Bar -->
+    <div class="announcement-bar text-white text-center py-2 px-4 text-sm md:text-base">
+        <i class="fas fa-truck mr-2"></i> Fast Worldwide Shipping - 5 Days Delivery | 100% Satisfaction Guarantee
+    </div>
+
+    <!-- Header -->
+    <header class="header-sticky">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <div class="flex items-center justify-between w-full">
+                <!-- Logo -->
+                <a href="https://test-acc-12349.github.io/lightbox-store-2025-10-18-eyu0v" class="flex items-center space-x-2 cursor-pointer">
+                    <i class="fas fa-lightbulb text-2xl text-gray-900"></i>
+                    <span class="text-2xl font-bold text-gray-900">Lightbox</span>
+                </a>
+
+                <!-- Back Link -->
+                <a href="https://test-acc-12349.github.io/lightbox-store-2025-10-18-eyu0v" class="nav-link text-gray-700 font-medium hover:text-gray-900">
+                    ← Back
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight leading-tight">
+                Terms of Service
+            </h1>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                Last updated: <span id="last-updated"></span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <!-- Introduction -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Introduction</h2>
+                <div class="prose prose-gray max-w-none">
+                    <p class="text-gray-600 text-lg leading-relaxed mb-4">
+                        Welcome to Lightbox Store ("we," "us," "our," or "Company"). These Terms of Service ("Terms") govern your access to and use of our website, mobile applications, and all related services (collectively, the "Service"). By accessing or using our Service, you agree to be bound by these Terms. If you do not agree to abide by the above, please do not use this Service.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-4">
+                        Lightbox Store reserves the right to modify these Terms at any time. We will notify you of any changes by updating the "Last Updated" date of these Terms of Service. Your continued use of the Service following the posting of revised Terms means that you accept and agree to the changes. We encourage you to review these Terms periodically to ensure you are familiar with the most current version.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        If you have any questions about these Terms or our practices, please contact us at the information provided in the Contact Information section below.
+                    </p>
+                </div>
+            </div>
+
+            <!-- User Agreements -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">User Agreements and Eligibility</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Eligibility</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            To use our Service, you must be at least 18 years old or the legal age of majority in your jurisdiction. By using the Service, you represent and warrant that you meet these eligibility requirements. If you are under 18 years old, you may only use the Service under the supervision of a parent or legal guardian who agrees to be bound by these Terms.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Account Registration</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-3">
+                            If you create an account on our Service, you agree to provide accurate, current, and complete information and to update such information as necessary to keep it accurate, current, and complete. You are responsible for maintaining the confidentiality of your account information and password and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account.
+                        </p>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            You are solely responsible for all activities conducted through your account. We are not liable for any loss or damage arising from your failure to maintain the confidentiality of your account information or password, or from any unauthorized access to or use of your account.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">User Responsibilities</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            You agree to use our Service only for lawful purposes and in a way that does not infringe upon the rights of others or restrict their use and enjoyment of the Service. Prohibited behavior includes harassing or causing distress or inconvenience to any person, transmitting obscene or offensive content, or disrupting the normal flow of dialogue within our Service.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Acceptable Use -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Acceptable Use Policy</h2>
+                <div class="space-y-6">
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        You agree not to use our Service for any purpose that is unlawful or prohibited by these Terms. Specifically, you agree not to:
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-green-600 font-bold mr-4 mt-1">•</span>
+                            <span class="text-gray-600 text-lg leading-relaxed">Violate any applicable laws, regulations, or third-party rights, including intellectual property rights, privacy rights, and rights of publicity</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 font-bold mr-4 mt-1">•</span>
+                            <span class="text-gray-600 text-lg leading-relaxed">Transmit any content that is unlawful, threatening, abusive, defamatory, obscene, or otherwise objectionable</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 font-bold mr-4 mt-1">•</span>
+                            <span class="text-gray-600 text-lg leading-relaxed">Impersonate any person or entity or falsely claim an affiliation with any person or entity</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 font-bold mr-4 mt-1">•</span>
+                            <span class="text-gray-600 text-lg leading-relaxed">Engage in any form of harassment, bullying, or discrimination based on race, gender, age, religion, nationality, sexual orientation, or disability</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 font-bold mr-4 mt-1">•</span>
+                            <span class="text-gray-600 text-lg leading-relaxed">Attempt to gain unauthorized access to our Service or its related systems or networks</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 font-bold mr-4 mt-1">•</span>
+                            <span class="text-gray-600 text-lg leading-relaxed">Disrupt or interfere with the security of, or otherwise cause harm to, the Service or its users</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 font-bold mr-4 mt-1">•</span>
+                            <span class="text-gray-600 text-lg leading-relaxed">Collect or track personal information of others without their consent</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 font-bold mr-4 mt-1">•</span>
+                            <span class="text-gray-600 text-lg leading-relaxed">Spam, phish, pharm, pretext, spider, crawl, or scrape the Service</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 font-bold mr-4 mt-1">•</span>
+                            <span class="text-gray-600 text-lg leading-relaxed">Use any automated system, including bots, to access the Service without our prior written permission</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 font-bold mr-4 mt-1">•</span>
+                            <span class="text-gray-600 text-lg leading-relaxed">Promote or facilitate any illegal activity or enterprise</span>
+                        </li>
+                    </ul>
+                    <p class="text-gray-600 text-lg leading-relaxed mt-6">
+                        We reserve the right to investigate any violation of these Terms and to take appropriate legal action, including without limitation, referral to law enforcement, civil liability, and termination of your account. We also reserve the right to remove any content that violates these Terms or that we deem harmful, offensive, or otherwise inappropriate at our sole discretion.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Limitation of Liability -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Limitation of Liability</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Disclaimer of Warranties</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            OUR SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMISSIBLE UNDER APPLICABLE LAW, LIGHTBOX STORE DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Limitation of Damages</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-3">
+                            IN NO EVENT SHALL LIGHTBOX STORE, ITS DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOSS OF PROFITS, LOSS OF REVENUE, LOSS OF DATA, OR OTHER INTANGIBLE LOSSES, RESULTING FROM (I) YOUR ACCESS TO, USE OF, OR INABILITY TO ACCESS OR USE THE SERVICE; (II) ANY CONDUCT OR CONTENT OF ANY THIRD PARTY ON THE SERVICE; (III) ANY CONTENT OBTAINED FROM THE SERVICE; OR (IV) UNAUTHORIZED ACCESS, USE, OR ALTERATION OF YOUR TRANSMISSIONS OR CONTENT.
+                        </p>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            EXCEPT AS OTHERWISE PROVIDED IN A WRITTEN AGREEMENT BETWEEN YOU AND LIGHTBOX STORE, IN NO EVENT SHALL LIGHTBOX STORE'S TOTAL LIABILITY TO YOU FOR ALL DAMAGES, LOSSES, AND CAUSES OF ACTION EXCEED THE AMOUNT YOU HAVE PAID TO LIGHTBOX STORE IN THE TWELVE (12) MONTHS PRIOR TO THE DATE OF YOUR CLAIM, OR ONE HUNDRED DOLLARS ($100), WHICHEVER IS LESS.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Indemnification</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            You agree to indemnify, defend, and hold harmless Lightbox Store and its officers, directors, employees, and agents from and against any claims, damages, losses, liabilities, and expenses (including reasonable attorneys' fees) arising from or related to your use of the Service, your violation of these Terms, or your violation of any rights of a third party.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Information -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Product Information and Purchases</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Product Descriptions</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            We strive to provide accurate descriptions and pricing for all products offered on our Service. However, we do not warrant that product descriptions, pricing, or other content on our Service is accurate, complete, reliable, current, or error-free. If a product offered by Lightbox Store is not as described, your sole remedy is to return it in unused condition.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Pricing and Availability</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-3">
+                            All prices are subject to change without notice. We reserve the right to limit quantities and to discontinue any product at any time. Products are subject to availability, and we reserve the right to refuse any order or cancel any order at our sole discretion.
+                        </p>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            We reserve the right to correct any pricing errors or inaccuracies on our Service, including errors that may appear on order confirmations or invoices. If we correct a pricing error, we will notify you of the correction and you will have the opportunity to confirm your order at the corrected price or cancel your order.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Returns and Refunds</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            Our return and refund policy is set forth in our Return Policy, which is incorporated into these Terms by reference. By making a purchase, you agree to be bound by the terms of our Return Policy. For the most current information regarding our return and refund procedures, please visit our website or contact customer service.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Intellectual Property -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Intellectual Property Rights</h2>
+                <div class="space-y-6">
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        The Service and its entire contents, features, and functionality (including but not limited to all information, software, text, displays, images, video, and audio) are owned by Lightbox Store, its licensors, or other providers of such material and are protected by United States and international copyright, trademark, and other intellectual property laws.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        You may not reproduce, distribute, transmit, display, perform, broadcast, publish, license, transfer, or sell any content on the Service without the prior written permission of Lightbox Store or the applicable rights holder, except as permitted by applicable law or these Terms. You may view and print pages from the Service for your personal, non-commercial use, provided that you retain all copyright and other proprietary notices.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        "Lightbox Store" and all related names, logos, product and service names, designs, and slogans are trademarks or service marks of Lightbox Store or its affiliates or licensors. You may not use these trademarks without the prior written permission of Lightbox Store.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Third Party Links -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Third-Party Links and Content</h2>
+                <div class="space-y-6">
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Our Service may contain links to third-party websites, applications, and content that are not operated by Lightbox Store. We do not endorse, warrant, or assume any responsibility for any third-party websites, applications, or content. Your access to and use of third-party websites is at your own risk and subject to the terms and conditions of those websites.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Lightbox Store is not responsible for any content, accuracy, completeness, legality, or decency of third-party websites or applications. We are not responsible for any harm or damages related to the purchase or use of goods or services available through third-party websites or applications.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Termination -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Termination</h2>
+                <div class="space-y-6">
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        We may terminate or suspend your account and access to the Service immediately, without prior notice or liability, for any reason or no reason, including if you breach any provision of these Terms. Upon termination, your right to use the Service will immediately cease.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        If we terminate your account due to your violation of these Terms, you may not re-register for the Service under a different account without our express written permission. Sections of these Terms that by their nature should survive termination will continue in effect after termination, including but not limited to Limitation of Liability, Indemnification, and Intellectual Property Rights.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Governing Law -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Governing Law and Dispute Resolution</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Governing Law</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law principles. Any action or proceeding arising out of or related to these Terms or your use of the Service shall be brought exclusively in the state or federal courts located in the United States.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Dispute Resolution</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-3">
+                            Before initiating any legal proceeding, you agree to attempt to resolve any dispute with Lightbox Store by contacting us at the information provided in the Contact Information section below. If we are unable to resolve your dispute within thirty (30) days, either party may initiate formal legal proceedings.
+                        </p>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            You agree that any legal action or proceeding relating to your access to or use of the Service shall be brought exclusively in the state or federal courts located in the United States, and you consent to the personal jurisdiction and venue of such courts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modifications to Service -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Modifications to Service</h2>
+                <div class="space-y-6">
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Lightbox Store reserves the right to modify or discontinue the Service or any portion thereof at any time, with or without notice to you. We shall not be liable to you or any third party for any modification, suspension, or discontinuation of the Service or any portion thereof.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="mb-12 bg-gray-50 rounded-xl p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
+                <div class="space-y-6">
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        If you have any questions about these Terms of Service, please contact us at:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gradient-to-br from-blue-50 to-blue-100 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-blue-600 text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-1">Email</h3>
+                                <a href="mailto:admin@lru.com" class="text-blue-600 hover:text-blue-700 transition-colors duration-300 text-lg">
+                                    admin@lru.com
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gradient-to-br from-green-50 to-green-100 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-globe text-green-600 text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-1">Website</h3>
+                                <a href="https://lru.com" class="text-green-600 hover:text-green-700 transition-colors duration-300 text-lg">
+                                    https://lru.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-lg leading-relaxed mt-6">
+                        We will make every effort to resolve your concerns within a reasonable time frame.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Entire Agreement -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Entire Agreement</h2>
+                <div class="space-y-6">
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        These Terms of Service, together with our Privacy Policy and any other policies or documents referenced herein, constitute the entire agreement between you and Lightbox Store regarding your use of the Service and supersede all prior or contemporaneous communications, representations, and agreements, whether oral or written.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        If any provision of these Terms is found to be invalid or unenforceable, that provision shall be reformed to the minimum extent necessary to make it valid and enforceable, and the remaining provisions shall remain in full force and effect.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Footer Content -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-lightbulb text-2xl text-yellow-400"></i>
+                        <span class="text-2xl font-bold text-white">Lightbox</span>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-4">
+                        Premium LED light boxes for photographers, videographers, and content creators worldwide.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-youtube text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="https://test-acc-12349.github.io/lightbox-store-2025-10-18-eyu0v" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a>
+                        </li>
+                        <li>
+                            <a href="https://test-acc-12349.github.io/lightbox-store-2025-10-18-eyu0v#features" class="text-gray-400 hover:text-white transition-colors duration-300">Features</a>
+                        </li>
+                        <li>
+                            <a href="https://test-acc-12349.github.io/lightbox-store-2025-10-18-eyu0v#benefits" class="text-gray-400 hover:text-white transition-colors duration-300">Benefits</a>
+                        </li>
+                        <li>
+                            <a href="https://test-acc-12349.github.io/lightbox-store-2025-10-18-eyu0v#about" class="text-gray-400 hover:text-white transition-colors duration-300">About Us</a>
+                        </li>
+                        <li>
+                            <a href="https://test-acc-12349.github.io/lightbox-store-2025-10-18-eyu0v#testimonials" class="text-gray-400 hover:text-white transition-colors duration-300">Testimonials</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Support</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="https://test-acc-12349.github.io/lightbox-store-2025-10-18-eyu0v#faq" class="text-gray-400 hover:text-white transition-colors duration-300">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="https://test-acc-12349.github.io/lightbox-store-2025-10-18-eyu0v#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="privacy.html" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="terms.html" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a>
+                        </li>
+                        <li>
+                            <a href="blog.html" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Contact</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-envelope text-yellow-400 mt-1 flex-shrink-0"></i>
+                            <a href="mailto:admin@lru.com" class="text-gray-400 hover:text-white transition-colors duration-300">admin@lru.com</a>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-globe text-yellow-400 mt-1 flex-shrink-0"></i>
+                            <a href="https://lru.com" class="text-gray-400 hover:text-white transition-colors duration-300 break-all">https://lru.com</a>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-yellow-400 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-400">Worldwide Shipping Available</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <p class="text-gray-400 text-sm text-center md:text-left mb-4 md:mb-0">
+                        &copy; <span id="year">2024</span> Lightbox Store. All rights reserved.
+                    </p>
+                    <div class="flex items-center space-x-6">
+                        <a href="privacy.html" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Privacy Policy</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Terms of Service</a>
+                        <a href="blog.html" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Set last updated date
+        const lastUpdatedDate = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('last-updated').textContent = lastUpdatedDate.toLocaleDateString('en-US', options);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
